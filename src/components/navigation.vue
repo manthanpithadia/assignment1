@@ -1,8 +1,9 @@
 <template>
      <v-app-bar
       app
-      color="white"
+      color="white" 
       flat
+      
     >
       <v-container class="py-0 fill-height">
         <div id="navigation">
