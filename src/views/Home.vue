@@ -9,7 +9,7 @@
               rounded="lg"
             >
               <!-- Enter content here -->
-              <!--Component-->
+              <!--Component -->
              <product-card-view>
 
              </product-card-view>
