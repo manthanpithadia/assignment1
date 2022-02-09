@@ -371,6 +371,82 @@ export default {
         selection: 0,
         details:"Zipper closure Available in extended sizes Premium quality, super stretchy denim Hugs your curves and keeps its shape all day Quality is our Signature INSEAM (S=29, M=31, L=33) New Brand Logo and Packaging"
       },
+
+      {
+        id: 3,
+        messages: 0,
+        image:
+          "https://pyxis.nymag.com/v1/imgs/503/7d9/0896ab3731f23e07c101569d646c92d157-threedotstee.2x.rdeep-vertical.w245.jpg",
+        title: "T-shirt",
+        rating: "3.9",
+        feedback: "482",
+        chip: 0,
+        colors: [
+          {
+            id: 0,
+            name: "Pure white ",
+            imgUrl:
+              "https://pyxis.nymag.com/v1/imgs/503/7d9/0896ab3731f23e07c101569d646c92d157-threedotstee.2x.rdeep-vertical.w245.jpg",
+            avail: true,
+          },
+          {
+            id: 1,
+            name: "Jet black",
+            imgUrl:
+              "https://i5.walmartimages.com/asr/2853b798-b731-496e-8170-02f74f65fc68_1.43ea1192a19c761faa162e114a0ab91d.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF",
+            avail: true,
+          },
+          {
+            id: 2,
+            name: "Vino",
+            imgUrl:
+              "https://cf.shopee.ph/file/6cecf9627284efe8817d5a8902e4e5d7",
+            avail: false,
+          },
+        ],
+        productDesc: "In Stock",
+        price: 50,
+        selection: 0,
+        details:"95% Cotton, 5% Spandex Suggest to hand wash ,Machine wash is ok , with Cold Water, Not Bleach. Unisex Size, Adult size fit Men ,Women,almost all people, standard size S-2xl can choose. Funny Graphic Friend prints Letter Top, Short sleeve, Crew neck.Lightweight and Cool To Wear In Spring, Summer and Fall . Suitable for Casual, Workout, Going Out ,Work, Travel, Home, Office,You Can Pair with Fashion Jeans, Shorts, Pants, Trousers,Legging, Skirts. You can pair this basic tops under a jacket, with jeans, leggings or a skirt in spring, summer, fall and winter. A wardrobe must-have! We listen to customer feedback and fine-tune every detail to ensure quality, fit, and comfort."
+      },
+
+      {
+        id: 4,
+        messages: 0,
+        image:
+          "https://5.imimg.com/data5/NI/GW/MY-19078323/girls-plain-regular-fit-denim-jeans-500x500.jpg",
+        title: "Jeans",
+        rating: "4",
+        feedback: "365",
+        chip: 0,
+        colors: [
+          {
+            id: 0,
+            name: "Blue",
+            imgUrl:
+              "https://5.imimg.com/data5/NI/GW/MY-19078323/girls-plain-regular-fit-denim-jeans-500x500.jpg",
+            avail: true,
+          },
+          {
+            id: 1,
+            name: "Black",
+            imgUrl:
+              "https://img.hollisterco.com/is/image/anf/KIC_355-1166-0655-900_prod1?policy=product-medium",
+            avail: false,
+          },
+          {
+            id: 2,
+            name: "Gray",
+            imgUrl:
+              "https://target.scene7.com/is/image/Target/GUEST_56a8f75b-bc7d-4973-bcb5-89e69e72b646",
+            avail: true,
+          },
+        ],
+        productDesc: "In Stock",
+        price: 25,
+        selection: 0,
+        details:"Zipper closure Available in extended sizes Premium quality, super stretchy denim Hugs your curves and keeps its shape all day Quality is our Signature INSEAM (S=29, M=31, L=33) New Brand Logo and Packaging"
+      },
     ],
 
     //Feedbacks
