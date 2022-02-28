@@ -6,6 +6,7 @@ import About from '../views/About.vue'
 import login from '../views/Login.vue'
 import productDetails from '../views/productDetails.vue'
 
+
 Vue.use(VueRouter)
 
 const routes = [

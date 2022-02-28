@@ -13,7 +13,14 @@
       Sorry <strong>No items</strong> Available.
     </v-alert>
     
+    
+
     <v-row>
+      <table>
+      <tr>
+          <td>{{productTableData}}</td>
+      </tr>
+    </table>
       <v-col v-for="card in cards" :key="card" cols="4">
         <div>
           <v-card
@@ -73,7 +80,7 @@
             </v-card-text>
 
             <v-divider class="mx-4" />
-
+            <v-btn color="success" v-on:click="fetchAllData()">click</v-btn>
             <v-card-title>Colors</v-card-title>
 
             <v-card-text>
@@ -110,7 +117,7 @@
                       <v-icon dark left> mdi-shopping </v-icon>
                     </v-badge>
                   </div>
-                  <div id="btnText">Add to cart</div>
+                  <div id="btnText" >Add to cart</div>
                 </v-btn>
 
                 <v-btn text color="error" v-on:click="removeFromCart(card.id)">
@@ -243,10 +250,16 @@
 <script>
 // Importing the DataTransfer component
 import dataTransfer from './dataTransfer.vue'
+import axios from 'axios'
+import Vue from 'vue';
+import VueAxios from 'vue-axios'
+Vue.use(VueAxios,axios)
+
 export default {
   name: "productCardView.vue",
   components: {dataTransfer},
   data: () => ({
+    productTableData:'',
     cart: 1,
     alert: false,
     dialog: false,
@@ -469,7 +482,15 @@ export default {
   props: {
     getBadge: Function,
   },
+  /*
+  mounted(){
+      Vue.axios.post('../retrieve.php')
+      .then((response)=>{
+        this.alert(response);
+      })
+  },*/
   methods: {
+
     reserve() {
       this.loading = true;
       setTimeout(() => (this.loading = false), 2000);
@@ -503,8 +524,20 @@ export default {
 
     openProductDetails(card){
         this.$router.push({name:"ProductDetails",params:{data: card}})
+    },
+
+    fetchAllData(){
+      axios.post('http://localhost/assignment1/src/retrieve.php')
+      .then(function(response){
+         alert(""+response.data);  
+      })
+     
     }
   },
+  method:function(){
+    this.fetchAllData();
+  }
+
 };
 </script>
 
