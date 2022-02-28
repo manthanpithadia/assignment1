@@ -7,6 +7,7 @@
     $user = $_REQUEST['user'];
 
 
+
     $sql = "INSERT INTO `cart`(`PID`, `product`, `quantities`, `user`) 
     VALUES ($pid,$product,$qty,$user)";
     $q=mysqli_query($con,$sql);
