@@ -1,24 +1,20 @@
 <?php
-   header('Access-Control-Allow-Origin: *');
+//http://localhost/assignment1/src/login.php?email=%22demo@gmail.com%22&pass=%22abcd1234%22
     include "connection.php";
+   
+    $email = $_REQUEST['email'];
+    $pass = $_REQUEST['pass'];
 
-    $id=$_REQUEST['id'];
 
-    $sql="select * from where id=$id";
+    $sql="select * from user where email=$email and password=$pass";
     $q=mysqli_query($con,$sql);
 
-    $rows=array();
-
-    if($q)
+    if(mysqli_num_rows($q)>0)
     {        
-        while(($row=mysqli_fetch_assoc($q))!=null)
-        {
-        $rows['data'][]=$row;
-        }
-        print(json_encode($rows));
+        print(json_encode("login success"));
     }
     else
     {
-    echo "try again";
+        print(json_encode("login failed"));
     }
 ?>
