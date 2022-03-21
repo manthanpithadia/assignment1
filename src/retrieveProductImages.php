@@ -1,11 +1,10 @@
 <?php
    header('Access-Control-Allow-Origin: *');
     include "connection.php";
-    $sql="select * from product";
+    $sql="select * from productimages";
     $q=mysqli_query($con,$sql);
 
     $rows=array();
-
 
     if($q)
     {        
