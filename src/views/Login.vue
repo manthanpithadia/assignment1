@@ -73,6 +73,7 @@ export default {
      uname: null,
      pass: null
     }),
+// Auth using axios
   mounted(){
       axios.get('http://localhost:9000/login')
       .then((response)=>{
