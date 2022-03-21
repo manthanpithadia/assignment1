@@ -10,6 +10,7 @@
   "dependencies": {
     "axios": "^0.26.0",
     "core-js": "^3.6.5",
+    "express": "^4.17.3",
     "vue": "^2.6.11",
     "vue-axios": "^3.4.1",
     "vue-router": "^3.5.3",
@@ -24,6 +25,7 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
+    "nodemon": "^2.0.15",
     "sass": "~1.32.0",
     "sass-loader": "^10.0.0",
     "vue-cli-plugin-vuetify": "~2.4.5",
@@ -48,5 +50,17 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "description": "```\r npm install\r ```",
+  "main": "babel.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manthanpithadia/assignment1.git"
+  },
+  "author": "Manthan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manthanpithadia/assignment1/issues"
+  },
+  "homepage": "https://github.com/manthanpithadia/assignment1#readme"
 }

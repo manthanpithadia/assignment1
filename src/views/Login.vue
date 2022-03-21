@@ -24,17 +24,20 @@
                 filled
                 rounded
                 dense
+                v-model="uname"
           ></v-text-field>  
           <v-text-field         
                 label="Password"
                 filled
                 rounded
                 dense
+                v-model="pass"
           ></v-text-field>   
 
            <v-btn 
            id="btn"
-           color="primary">
+           color="primary"
+           v-on:click="btnLoninClicked">
             Login
             </v-btn>
             </v-col>
@@ -63,9 +66,34 @@
 </style>
 
 <script>
+import axios from 'axios'
 export default {
   data: () => ({      
-     
+     users:[],
+     uname: null,
+     pass: null
     }),
+  mounted(){
+      axios.get('http://localhost:9000/login')
+      .then((response)=>{
+        console.log(response.data);
+        this.users = response.data;
+      })
+      .catchc((error)=>{
+      console.log(error);
+      });
+  },
+  methods:{
+    btnLoninClicked(){      
+      if(this.users[0].username == this.uname && this.users[0].password == this.pass)
+      {
+        alert("login success");
+      }
+      else{
+        alert("login failed");
+      }
+    }
+  }
+  
 }
 </script>

@@ -16,11 +16,11 @@
     
 
     <v-row>
-      <table>
+ <!--<table>
       <tr>
           <td>{{productTableData}}</td>
       </tr>
-    </table>
+    </table> -->
       <v-col v-for="card in cards" :key="card" cols="4">
         <div>
           <v-card
@@ -29,7 +29,9 @@
             class="mx-auto my-12"
             max-width="374"
             elevation="3"            
-            >
+            >           
+            
+            
             <template slot="progress">
               <v-progress-linear
                 color="deep-purple"
@@ -48,11 +50,11 @@
 
             <v-card-title id="productTitle">
               <div>
-                {{ card.title }}
+                {{ products[card.id].name }}
               </div>
 
               <div>
-                ${{ card.price }}
+                ${{products[card.id].price}}
               </div>
             </v-card-title>
 
@@ -79,8 +81,7 @@
               </div>
             </v-card-text>
 
-            <v-divider class="mx-4" />
-            <v-btn color="success" v-on:click="fetchAllData()">click</v-btn>
+            <v-divider class="mx-4" />        
             <v-card-title>Colors</v-card-title>
 
             <v-card-text>
@@ -150,6 +151,7 @@
                             outlined
                             name="input-7-4"
                             label="User Feedback"
+                            v-model="comment"
                             value="I Love this Product"
                           ></v-textarea>
                         </v-card-text>
@@ -158,7 +160,9 @@
 
                         <v-card-actions>
                           <v-spacer></v-spacer>
-                          <v-btn color="primary" text @click="dialog = false">
+                          <v-btn color="primary" text 
+                          @click="btnSubmitClick()"
+                          >
                             Submit
                           </v-btn>
                         </v-card-actions>
@@ -259,6 +263,8 @@ export default {
   name: "productCardView.vue",
   components: {dataTransfer},
   data: () => ({
+    products:[],
+    comment:null,
     productTableData:'',
     cart: 1,
     alert: false,
@@ -482,14 +488,34 @@ export default {
   props: {
     getBadge: Function,
   },
-  /*
+  
   mounted(){
-      Vue.axios.post('../retrieve.php')
+      axios.get('http://localhost:9000/product')
       .then((response)=>{
-        this.alert(response);
+        console.log(response.data);
+        this.products = response.data;
       })
-  },*/
+      .catchc((error)=>{
+      console.log(error);
+      });
+  },
   methods: {
+
+    btnSubmitClick(){
+      let commentData = {
+        text: this.comment,
+        userId: "manthan",
+        productId: "p1"
+      }
+      axios.post('http://localhost:9000/comment',commentData)
+      .then((response)=>{
+        console.log(response);
+      })
+      .catch((error)=>{
+        console.log(error);
+      });      
+      this.dialog = false;
+    },
 
     reserve() {
       this.loading = true;
