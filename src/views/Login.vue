@@ -84,6 +84,7 @@ export default {
       });
   },
   methods:{
+    // function for login
     btnLoninClicked(){      
       if(this.users[0].username == this.uname && this.users[0].password == this.pass)
       {
