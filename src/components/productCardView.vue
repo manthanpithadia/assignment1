@@ -501,7 +501,7 @@ export default {
       });
   },
   methods: {
-
+    // adding data to the database
     btnSubmitClick(){
       let commentData = {
         text: this.comment,
