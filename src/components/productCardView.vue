@@ -489,7 +489,7 @@ export default {
   props: {
     getBadge: Function,
   },
-  
+  //using axios to get response.data (Product Data)
   mounted(){
       axios.get('http://localhost:9000/product')
       .then((response)=>{
