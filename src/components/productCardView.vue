@@ -491,7 +491,7 @@ export default {
   },
   
   mounted(){
-      axios.get('http://localhost:9000/product')
+      axios.get('http://localhost:5000/api/Products')
       .then((response)=>{
         console.log(response.data);
         this.products = response.data;
@@ -504,11 +504,10 @@ export default {
     // adding data to the database
     btnSubmitClick(){
       let commentData = {
-        text: this.comment,
-        userId: "manthan",
-        productId: "p1"
+        name: this.comment,
+        rating: this.rating
       }
-      axios.post('http://localhost:9000/comment',commentData)
+      axios.post('http://localhost:5000/api/Comments',commentData)
       .then((response)=>{
         console.log(response);
       })
