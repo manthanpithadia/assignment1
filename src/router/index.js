@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import Bookings from '../views/bookings.vue'
 import contactUs from '../views/Contact.vue'
 import About from '../views/About.vue'
 import login from '../views/Login.vue'
@@ -21,12 +22,12 @@ const routes = [
     component:contactUs,
   },
   {
-    path: '/contact',
-    name: 'Contact',
+    path: '/bookings',
+    name: 'Bookings',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: contactUs
+    component: Bookings
   },
   {
     path: '/login',

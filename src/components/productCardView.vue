@@ -1,6 +1,5 @@
 <template>
   <v-container>
-
     <v-alert
       v-model="alert"
       dismissible
@@ -8,13 +7,10 @@
       border="left"
       elevation="2"
       colored-border
-      icon="mdi-alert-outline"
-    >
+      icon="mdi-alert-outline">
       Sorry <strong>No items</strong> Available.
     </v-alert>
     
-    
-
     <v-row>
  <!--<table>
       <tr>
@@ -28,10 +24,8 @@
             :loading="loading"
             class="mx-auto my-12"
             max-width="374"
-            elevation="3"            
-            >           
-            
-            
+            elevation="3">           
+        
             <template slot="progress">
               <v-progress-linear
                 color="deep-purple"

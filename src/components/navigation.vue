@@ -2,8 +2,7 @@
      <v-app-bar
       app
       color="white" 
-      flat
-      
+      flat      
     >
       <v-container class="py-0 fill-height">
         <div id="navigation">
@@ -12,7 +11,7 @@
               <span class="white--text text-h5">MP</span>
             </v-avatar>
             </div>
-       
+
               <div id="navText">
                   <router-link class="routeUrl" to="/"><v-btn text color="#1e1e1e">Home</v-btn></router-link>
                   <router-link class="routeUrl" to="/contact"><v-btn text color="#1e1e1e">Contact Us</v-btn></router-link>
